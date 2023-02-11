@@ -88,15 +88,15 @@
             </span>
             <span class="author-block">
               <a href="https://xuyu0010.wixsite.com/xuyu0010">Yuecong Xu</a><sup>1</sup>,
-            </span> <br />
+            </span>
             <span class="author-block">
               <a href="https://scholar.google.com/citations?user=XcV_sesAAAAJ&hl=en">Shenghai Yuan</a><sup>1</sup>,
             </span>
             <span class="author-block">
-              <a href="http://hanzou.tech/">Han Zou</a><sup>1</sup>,
+              <a href="http://hanzou.tech/">Han Zou</a><sup>1</sup>
             </span>
             <span class="author-block">
-              <a href="https://christopherlu.github.io/">Chris Xiaoxuan Lu</a><sup>2</sup>,
+              <a href="https://christopherlu.github.io/">Chris Xiaoxuan Lu</a><sup>2</sup>
             </span>
             <span class="author-block">
               <a href="https://personal.ntu.edu.sg/elhxie/">Lihua Xie</a><sup>1</sup>
@@ -104,8 +104,7 @@
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>School of Electrical and Electronic Engineering, Nanyang Technological University</span>
-            <br />
+            <span class="author-block"><sup>1</sup>School of Electrical and Electronic Engineering, Nanyang Technological University,</span>
             <span class="author-block"><sup>2</sup>School of Informatics, University of Edinburgh</span>
           </div>
 
@@ -168,6 +167,7 @@
   </div>
 </section>
 
+<!-- Demo video link-->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
@@ -176,8 +176,7 @@
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
+        <span class="dnerf">Visualization of mRI from different camera poses.</span>
         portraits.
       </h2>
     </div>
@@ -185,7 +184,7 @@
 </section>
 
 
-<section class="hero is-light is-small">
+<!-- <section class="hero is-light is-small">
   <div class="hero-body">
     <div class="container">
       <div id="results-carousel" class="carousel results-carousel">
@@ -241,7 +240,7 @@
     </div>
   </div>
 </section>
-
+-->
 
 <section class="section">
   <div class="container is-max-desktop">
@@ -251,31 +250,24 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            4D human perception plays an essential role in a myriad of applications, such as
+            home automation, healthcare, and metaverse avatar simulation. Existing solutions,
+            mainly relying on cameras and wearable devices, are either privacy-concerned or
+            inconvenient to use. To address these issues, wireless sensing emerges, which
+            leverages LiDAR, mmWave radar, and even WiFi signals for device-free human
+            sensing. 
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            In this paper, we propose the first multi-modal non-intrusive 4D human 
+            dataset, <span class="dnerf">MM-Fi</span>, with 25 daily or rehabilitation action categories to bridge the
+            gap between wireless sensors and high-level human perception tasks. Our dataset
+            consists of over 320k synchronized frames of five modalities from 40 human
+            subjects. Various annotations are provided to support potential sensing tasks, e.g.,
+            human pose estimation and action recognition. Extensive experiments have been
+            conducted to compare the sensing capacity of each or several modalities in terms of
+            multiple tasks. It is hoped that MM-Fi can contribute to wireless sensing research
+            with respect to action recognition, human pose estimation, multi-modal learning,
+            cross-modal supervision, and interdisciplinary healthcare research
           </p>
         </div>
       </div>
