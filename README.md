@@ -1,4 +1,6 @@
-# Nerfies
+# NTU-AIoT-Lab
+
+This is the main site for NTU-AIoT-Lab
 
 This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
 
