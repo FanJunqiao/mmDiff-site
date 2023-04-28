@@ -1,7 +1,7 @@
 window.HELP_IMPROVE_VIDEOJS = false;
 
-var INTERP_BASE = "./static/interpolation/stacked";
-var NUM_INTERP_FRAMES = 240;
+var INTERP_BASE = "./static/interpolation/MMFI_interp";
+var NUM_INTERP_FRAMES = 95;
 
 var interp_images = [];
 function preloadInterpolationImages() {
