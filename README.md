@@ -1,10 +1,8 @@
-# NTU-AIoT-Lab
+# mmDiff
 
-This is the main site for NTU-AIoT-Lab
+This is the main site for mmDiff
 
-The website for MM-Fi is here [mmfi_website](https://ntu-aiot-lab.github.io/mm-fi).
-
-The website is forked from [Nerfies website](https://nerfies.github.io).
+The website for mmDiff is here [mmDiff_website](https://fanjunqiao.github.io/mmDiff.github.io/).
 
 
 # Website License
