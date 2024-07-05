@@ -97,7 +97,7 @@
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://openreview.net/forum?id=1uAsASS1th"
+                <a href="https://arxiv.org/abs/2403.16198"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fas fa-file-pdf"></i>
@@ -106,7 +106,7 @@
                 </a>
               </span>
               <span class="link-block">
-                <a href="https://arxiv.org/abs/2305.10345"
+                <a href="https://arxiv.org/abs/2403.16198"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -115,7 +115,7 @@
                 </a>
               </span>
               <!-- Video Link. -->
-              <span class="link-block">
+              <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=T6TnKgGARgc"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -123,22 +123,22 @@
                   </span>
                   <span>Video</span>
                 </a>
-              </span>
-              <!-- Dataset Link. -->
+              </span> -->
+              <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/ybhbingo/MMFi_dataset"
+                <a href="https://github.com/FanJunqiao/mmDiff"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
-                  <span>Data</span>
+                  <span>Code</span>
                   </a>
             </div>
             
           <br />
           <br />
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><b>Accepted by NeurIPS 2023 Datasets and Benchmarks Track</b></span>
+            <span class="author-block"><b>Accepted by ECCV 2024</b></span>
           </div>
         </div>
       </div>
@@ -151,11 +151,11 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/MMFi_data_demo.mp4"
+        <source src="./static/videos/mmDiff demo v2.mp4"
                 type="video/mp4">
       </video>
       <h2 class="subtitle has-text-centered">
-        Visualization of the Data of each modality and their corresponding estimations.
+        Visualization of mmDiff: a diffusion-based human pose estimation for RF-vision, showing enhanced stability for handling signal noise and miss-detection.
       </h2>
     </div>
   </div>
@@ -228,24 +228,24 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            4D human perception plays an essential role in a myriad of applications, such as
-            home automation, healthcare, and metaverse avatar simulation. Existing solutions,
-            mainly relying on cameras and wearable devices, are either privacy-concerned or
-            inconvenient to use. To address these issues, wireless sensing emerges, which
-            leverages LiDAR, mmWave radar, and even WiFi signals for device-free human
-            sensing. 
+            Human pose estimation (HPE) from Radio Frequency vision (RF-vision) performs 
+            human sensing using RF signals that penetrate obstacles without revealing privacy 
+            (e.g., facial information). Recently, mmWave radar has emerged as a promising 
+            RF-vision sensor, providing radar point clouds by processing RF signals. 
+            However, the mmWave radar has a limited resolution with severe noise, leading to 
+            inaccurate and inconsistent human pose estimation. This work proposes mmDiff, 
+            a novel diffusion-based pose estimator tailored for noisy radar data. 
           </p>
           <p>
-            In this paper, we propose the first multi-modal non-intrusive 4D human 
-            dataset, <span class="dnerf">MM-Fi</span>, with 25 daily or rehabilitation action categories to bridge the
-            gap between wireless sensors and high-level human perception tasks. Our dataset
-            consists of over 320k synchronized frames of five modalities from 40 human
-            subjects. Various annotations are provided to support potential sensing tasks, e.g.,
-            human pose estimation and action recognition. Extensive experiments have been
-            conducted to compare the sensing capacity of each or several modalities in terms of
-            multiple tasks. It is hoped that MM-Fi can contribute to wireless sensing research
-            with respect to action recognition, human pose estimation, multi-modal learning,
-            cross-modal supervision, and interdisciplinary healthcare research
+            In this paper, we aims to provide reliable guidance as conditions to diffusion models. 
+            Two key challenges are addressed by mmDiff: (1) miss-detection of parts of human bodies, 
+            which is addressed by a module that isolates feature extraction from different body parts, 
+            and (2) signal inconsistency due to environmental interference, which is tackled by 
+            incorporating prior knowledge of body structure and motion. Several modules are designed 
+            to achieve these goals, whose features work as the conditions for the subsequent 
+            diffusion model, eliminating the miss-detection and instability of HPE based on RF-vision. 
+            Extensive experiments demonstrate that mmDiff outperforms existing methods significantly, 
+            achieving state-of-the-art performances on public datasets.
           </p>
         </div>
       </div>
@@ -258,30 +258,44 @@
   
       <div class="columns is-centered">
       <div class="column is-full-width">
-          <h2 class="title is-3">Sensor Platform</h2>
-          <img src="./static/images/setup.png"
+          <h2 class="title is-3">Motivation</h2>
+          <img src="./static/images/effect.pdf"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
+          <h2 class="subtitle has-text-centered">
+            Left: challenges of mmWave PCs. Right: the performance of existing SOTA 
+            (P4Transformer) compared to ours. PC's sparsity and dispersion cause inaccurate 
+            spline and shoulder. Inconsistent PCs with occasional miss-detection further cause 
+            size variance and pose vibration. mmDiff proposes diffusion-based pose estimation 
+            with enhanced accuracy and stability.
+          </h2>
       </div>
       </div>
   </div>
 </section>
-
-  
 
 <section class="section">
   <div class="container is-max-desktop">
   
       <div class="columns is-centered">
       <div class="column is-full-width">
-          <h2 class="title is-3">Scale and Modalities</h2>
-          <img src="./static/images/compare.png"
+          <h2 class="title is-3">System Architecture</h2>
+          <img src="./static/images/main8.pdf"
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
+          <h2 class="subtitle has-text-centered">
+            mmDiff proposes diffusion-based pose estimation with a conditional diffusion model, 
+            using mmWave radar information as conditions. $k \in [0..K]$ denotes the diffusion step.
+             Four modules are proposed to extract more reliable guidance, addressing PCs' noise and 
+             inconsistency respectively: GRC and LRC first extract more robust global-local radar features, 
+             $C^{glo}$ and $C^{loc}$; SLC and TMC then extract consistent human structure and motion 
+             patterns, $C^{tem}$ and $C^{lim}$.
+          </h2>
       </div>
       </div>
   </div>
 </section>
+
   
   
   
