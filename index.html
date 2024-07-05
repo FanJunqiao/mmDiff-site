@@ -263,11 +263,13 @@
                  class="interpolation-image"
                  alt="Interpolate start reference image."/>
           <h2 class="subtitle has-text-centered">
-            Left: challenges of mmWave PCs. Right: the performance of existing SOTA 
-            (P4Transformer) compared to ours. PC's sparsity and dispersion cause inaccurate 
-            spline and shoulder. Inconsistent PCs with occasional miss-detection further cause 
-            size variance and pose vibration. mmDiff proposes diffusion-based pose estimation 
-            with enhanced accuracy and stability.
+            <p>
+              Left: challenges of mmWave PCs. Right: the performance of existing SOTA 
+              (P4Transformer) compared to ours. PC's sparsity and dispersion cause inaccurate 
+              spline and shoulder. Inconsistent PCs with occasional miss-detection further cause 
+              size variance and pose vibration. mmDiff proposes diffusion-based pose estimation 
+              with enhanced accuracy and stability.
+            </p>
           </h2>
       </div>
       </div>
@@ -280,16 +282,20 @@
       <div class="columns is-centered">
       <div class="column is-full-width">
           <h2 class="title is-3">System Architecture</h2>
-          <img src="./static/images/main8.pdf"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
+          <iframe src="./static/images/main8.pdf"
+            style="width:600px; height:500px;" 
+            frameborder="0">
+          </iframe>
+
           <h2 class="subtitle has-text-centered">
-            mmDiff proposes diffusion-based pose estimation with a conditional diffusion model, 
-            using mmWave radar information as conditions. $k \in [0..K]$ denotes the diffusion step.
-             Four modules are proposed to extract more reliable guidance, addressing PCs' noise and 
-             inconsistency respectively: GRC and LRC first extract more robust global-local radar features, 
-             $C^{glo}$ and $C^{loc}$; SLC and TMC then extract consistent human structure and motion 
-             patterns, $C^{tem}$ and $C^{lim}$.
+            <p>
+              mmDiff proposes diffusion-based pose estimation with a conditional diffusion model, 
+              using mmWave radar information as conditions. $k \in [0..K]$ denotes the diffusion step.
+               Four modules are proposed to extract more reliable guidance, addressing PCs' noise and 
+               inconsistency respectively: GRC and LRC first extract more robust global-local radar features, 
+               $C^{glo}$ and $C^{loc}$; SLC and TMC then extract consistent human structure and motion 
+               patterns, $C^{tem}$ and $C^{lim}$.
+              </p>
           </h2>
       </div>
       </div>
