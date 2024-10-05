@@ -2,7 +2,7 @@
 
 This is the main site for mmDiff
 
-The website for mmDiff is here [mmDiff_website](https://fanjunqiao.github.io/mmDiff.github.io/).
+The website for mmDiff is here [mmDiff_website](https://fanjunqiao.github.io/mmDiff-site/).
 
 
 # Website License
